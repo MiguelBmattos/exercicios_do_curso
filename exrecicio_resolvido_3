@@ -1,0 +1,30 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		//informaçôes da primeira pessoa 
+		System.out.print("Digite o primeiro nome:");
+		String nome1 = sc.next();
+		System.out.print("\nDigite a idade da primeira pessoa:" );
+		int idade1 = sc.nextInt();
+		
+		//infomrmações da segunda pessoa
+		System.out.print("\nDigite o nome da segunda pessoa:");
+		String nome2 = sc.next();
+		System.out.print("\nDigite a idade da segunda pessoa:");
+		int idade2 = sc.nextInt();
+		
+		double media = (double) (idade1+idade2)/2;
+		
+		System.out.printf("\nA idade média de " + nome1 + " e "+ nome2 + " é de %.1f anos", media);
+		
+		sc.close();
+
+	}
+
+}
