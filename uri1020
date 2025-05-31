@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Qual sua idade em dias?");
+		int d = sc.nextInt();
+		
+		int anos, meses, dias;
+		
+		anos = d / 365;
+		meses = d % 365 / 30;
+		dias =  d % 365 % 30;
+		
+		System.out.println("\nVocê tem " + anos + " anos e " + meses + " e " + dias +" dias");
+		
+		sc.close();
+
+	}
+
+}
