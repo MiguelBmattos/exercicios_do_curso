@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Informe o tempo de duração em segundos:");
+		int N = sc.nextInt();
+		
+		int horas, minutos, segundos, resto;
+		
+		horas = N / 3600;
+		resto = N % 3600;
+		minutos = resto / 60;
+		segundos = resto % 60;
+		
+		System.out.print("O valor convertido para horas:minutos:segundos é: "+horas+":"+minutos+":"+segundos);
+		
+		sc.close();
+	}
+
+}
