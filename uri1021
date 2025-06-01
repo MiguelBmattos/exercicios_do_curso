@@ -39,7 +39,7 @@ public class Main {
 		System.out.println("\n "+cinco +" nota(s) de R$ 5,00");
 		System.out.println("\n " +dois + " nota(s) de R$ 2,00");
 		
-		System.out.println("Moedas:");
+		System.out.println("\nMoedas:");
 		System.out.println("\n "+(int)um + " moedas de R$ 1,00");
 		System.out.println("\n "+(int)fifty +" moedas de R$ 0,50");
 		System.out.println("\n "+(int)t5 +" moedas de R$ 0,25");
