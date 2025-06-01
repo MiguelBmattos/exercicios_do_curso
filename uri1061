@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int inicio, termino, duracao, resto, d, h, m, s;
+		
+		System.out.print("Dia ");
+		int d_inicio = sc.nextInt();
+		int h_inicio = sc.nextInt();
+		System.out.print(":");
+		int m_inicio = sc.nextInt();
+		System.out.print(":");
+		int s_inicio = sc.nextInt();
+		
+		System.out.print("Dia ");
+		int d_termino = sc.nextInt();
+		int h_termino = sc.nextInt();
+		System.out.print(":");
+		int m_termino = sc.nextInt();
+		System.out.print(":");
+		int s_termino = sc.nextInt();
+		
+		inicio = d_inicio*24*60*60 + h_inicio*60*60 + m_inicio*60 + s_inicio;
+		termino = d_termino*24*60*60 + h_termino*60*60 + m_termino*60 + s_termino;
+		duracao = termino-inicio;
+		
+		d = duracao / (24*60*60);
+		resto = duracao % (24*60*60);
+		h = resto / (60*60);
+		m = resto % (60*60) / 60;
+		s = resto % (60*60) % 60;
+		
+		System.out.println(d + " dia(s)");
+		System.out.println(h +" hora(s)");
+		System.out.println(m +" minuto(s)");
+		System.out.println(s +" segundo(s)");
+		
+		sc.close();
+	}
+
+}
