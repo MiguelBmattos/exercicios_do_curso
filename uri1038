@@ -1,0 +1,45 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int codigo = sc.nextInt();
+		double cq = 4.00;
+		double xs = 4.50;
+		double xb = 5.00;
+		double ts = 2.00;
+		double refri = 1.50;
+		int qnt = sc.nextInt();
+		double vf;
+		String e;
+		
+		switch (codigo) {
+		case 1:
+			vf = cq * qnt;
+			break;
+		case 2:
+			vf = xs * qnt;
+			break;
+		case 3:
+			vf = xb * qnt;
+			break;
+		case 4:
+			vf = ts * qnt;
+			break;
+		case 5:
+			vf  = refri * qnt;
+			break;
+		default:
+			vf = 0;
+			e = "item inexistente";
+			break;
+		}
+		System.out.printf("Total: R$ %.2f",vf);
+		sc.close();
+	}
+
+}
