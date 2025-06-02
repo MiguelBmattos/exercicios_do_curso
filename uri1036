@@ -1,0 +1,25 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double A = sc.nextDouble(); 
+		double B = sc.nextDouble(); 
+		double C = sc.nextDouble();
+		double delta = (Math.pow(B, 2)) - (4.0 * A * C);
+		double r1 = (-B + Math.sqrt(delta)) / (2*A);
+		double r2 = (-B - Math.sqrt(delta)) / (2*A);
+
+		if (delta < 0 || A == 0.0) {
+			System.out.print("IMPOSSÍVEL CALCULAR");
+		} else {
+			System.out.printf("R1 = %.5f", r1);
+			System.out.printf("\nR2 = %.5f\n", r2);
+		}
+		sc.close();
+	}
+}
