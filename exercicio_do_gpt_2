@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Idade: ");
+		int idade=sc.nextInt();
+		System.out.println("Medalhas: ");
+		int medalhas=sc.nextInt();
+		
+		if (idade<12 && medalhas>3) {
+			System.out.print("Atleta mirim destaque");
+		} else if(idade <12 && medalhas<=3) {
+			System.out.print("Atleta mirim iniciante");
+		}
+		 if (idade>=12 && idade<=17 && medalhas>=1) {
+			 System.out.print("Atleta juvenil competitivo");
+		}else  if(idade>=12 && idade<=17 && medalhas<1) {
+			System.out.print("Atleta juvenil inicante");
+		}  if(idade>=18 && medalhas>=10) {
+			System.out.print("Atleta profissional");
+		}else if(idade>=18 && medalhas<=9 && medalhas>=3) {
+			System.out.print("Atleta amador avançado");
+		} else if  (idade>=18 && medalhas<3) {
+			System.out.print("Atleta amador iniciante");
+		}
+		sc.close();
+	}
+
+}
