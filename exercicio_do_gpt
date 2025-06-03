@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int hora_inicio = sc.nextInt();
+		int minuto_inicio = sc.nextInt();
+		int hora_fim =sc.nextInt();
+		int minuto_fim = sc.nextInt();
+		
+		int duracao, hora, minuto;
+		
+		if (hora_inicio == hora_fim && minuto_inicio == minuto_fim) {
+			duracao = 24*60;
+		}else if(hora_inicio<hora_fim) {
+		duracao = (hora_fim*60 + minuto_fim)-(hora_inicio*60 + minuto_inicio); 
+		} else {
+			duracao = 24*60 - (hora_inicio*60 + minuto_inicio) + (hora_fim*60 + minuto_fim);
+		}
+		hora = duracao / 60;
+		minuto = duracao % 60;
+		
+		System.out.println("O jogo durou "+hora+" hora(s) e "+minuto+" minuto(s)");
+		sc.close();
+	}
+
+}
