@@ -37,7 +37,7 @@ public class Main {
 		if (mediaFinal>=5.0 && mediaFinal>0) {
 			System.out.println("\nAluno aprovado!");
 			System.out.printf("\nMédia final: %.1f\n", mediaFinal);
-		} else if(mediaFinal<4.9 && mediaFinal>0) {
+		} else if(mediaFinal<5.0 && mediaFinal>0) {
 			System.out.println("\nAluno reprovado");
 			System.out.printf("Média final: %.1f", mediaFinal);
 		}
