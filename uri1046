@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int h_i = sc.nextInt();
+		int h_f = sc.nextInt();
+		int duracao;
+		
+		if (h_i<h_f) {
+			duracao = h_f - h_i;
+		}else {
+			duracao = 24 - h_i + h_f;
+		}
+		System.out.println("O jogo durou " + duracao + " hora(s)");
+			sc.close();
+		}
+	}
+
+
