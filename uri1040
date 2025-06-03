@@ -1,0 +1,47 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double n1 = sc.nextDouble();
+		double n2 = sc.nextDouble();
+		double n3 = sc.nextDouble();
+		double n4 = sc.nextDouble();
+		double media1;
+		double nE = 0;
+		
+		media1 = ((n1*2)+(n2*3)+(n3*4)+(n4*1))/(2+3+4+1);
+		double mediaFinal=0;
+		
+		if (media1>=7.0) {
+			System.out.printf("Média: %.1f\n", media1);
+			System.out.println("\nAluno aprovado!");
+			nE=0;
+			mediaFinal = 0;
+		} else if (media1<5.0) {
+			System.out.printf("Média: %.1f\n",media1);
+			System.out.println("\nAluno reprovado.");
+			nE=0;
+			mediaFinal = 0;
+		} else if (media1>=5.0 && media1<=6.9) {
+			System.out.printf("Média: %.1f\n", media1);
+			System.out.println("\nAluno em exame.");
+			nE = sc.nextDouble();
+			System.out.printf("\nNota do exame: %.1f\n",nE);
+			mediaFinal = (media1 + nE)/2;
+		 }  
+		if (mediaFinal>=5.0 && mediaFinal>0) {
+			System.out.println("\nAluno aprovado!");
+			System.out.printf("\nMédia final: %.1f\n", mediaFinal);
+		} else if(mediaFinal<4.9 && mediaFinal>0) {
+			System.out.println("\nAluno reprovado");
+			System.out.printf("Média final: %.1f", mediaFinal);
+		}
+		sc.close();
+	}
+
+}
