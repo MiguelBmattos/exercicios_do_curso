@@ -1,0 +1,53 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+
+		double a, b, c, A2, BC, maior;
+
+		a = sc.nextDouble();
+		b = sc.nextDouble();
+		c = sc.nextDouble();
+
+		if (b > a) {
+			maior = a;
+			a = b;
+			b = maior;
+		}
+
+		if (c > a) {
+			maior = a;
+			a = c;
+			c = maior;
+		}
+
+		A2 = Math.pow(a, 2);
+		BC = Math.pow(b, 2) + Math.pow(c, 2);
+
+		if (a >= b + c) {
+			System.out.println("Não forma triângulo");
+		} else {
+			if (A2 > BC) {
+				System.out.println("Triângulo obtusângulo");
+			} else if (A2 < BC) {
+				System.out.println("Triângulo acutângulo");
+			} else {
+				System.out.println("Triângulo retângulo");
+			}
+			if (a == b && b == c) {
+				System.out.println("Triângulo equilatero");
+			} else if (a == b || a == c || b == c) {
+				System.out.println("Triângulo isosceles");
+			}
+
+		}
+
+		sc.close();
+	}
+
+}
