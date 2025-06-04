@@ -1,0 +1,44 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double a = sc.nextDouble();
+		double b = sc.nextDouble();
+		double c = sc.nextDouble();
+		double maior=0;
+		double area;
+		double perimetro;
+		
+		if (b>a) {
+			maior = a;
+			a = b;
+			b = maior;
+		}
+		if (c>a) {
+			maior = a;
+			a = c;
+			c = maior;
+		}
+		if(a==0 || b==0 || c==0) {
+			System.out.println("Triângulo ou trapézio inexistente");
+		}
+		
+		if (a>=b+c) {
+			area=((a+b)*c)/2;
+			System.out.printf("área = %.2f\n",area);
+		} else {
+			perimetro = a+b+c;
+			System.out.printf("perímetro = %.2f", perimetro);
+		}
+		
+
+		sc.close();
+
+	}
+
+}
