@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String comando;
+
+        System.out.println("=== Controle de Luz ===");
+        System.out.println("Comandos disponíveis:");
+        System.out.println("- ligar luz da sala");
+        System.out.println("- desligar luz da sala");
+        System.out.println("- ligar luz da cozinha");
+        System.out.println("- desligar luz da cozinha");
+        System.out.println("- sair");
+
+        do {
+            System.out.print("\nDigite um comando: ");
+            comando = sc.nextLine().toLowerCase().trim();
+
+            switch (comando) {
+                case "ligar luz da sala":
+                    System.out.println("Luz da sala ligada.");
+                    break;
+                case "desligar luz da sala":
+                    System.out.println("Luz da sala desligada.");
+                    break;
+                case "ligar luz da cozinha":
+                    System.out.println("Luz da cozinha ligada.");
+                    break;
+                case "desligar luz da cozinha":
+                    System.out.println("Luz da cozinha desligada.");
+                    break;
+                case "sair":
+                    System.out.println("Saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Comando não reconhecido.");
+            }
+
+        } while (!comando.equals("sair"));
+
+        sc.close();
+    }
+}
