@@ -1,0 +1,53 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double a = sc.nextDouble();
+		double b = sc.nextDouble();
+		double c = sc.nextDouble();
+		double d = sc.nextDouble();
+		double e = sc.nextDouble();
+		double f = sc.nextDouble();
+		int num=0;
+		double media=0;
+		
+		if(a>0) {
+			num += 1; 
+			media += a;
+		}
+		if(b>0) {
+			num += 1;
+			media += b;
+		}
+		if(c>0) {
+			num += 1;
+			media += c;
+		}
+		if(d>0) {
+			num += 1;
+			media += d;
+		}
+		if(e>0) {
+			num += 1;
+			media += e;
+		}
+		if(f>0) {
+			num += 1;
+			media += f;
+		}
+		
+		media = media/num;
+		
+		System.out.println(num+" valores positivos");
+		System.out.println(media);
+		
+		sc.close();
+
+	}
+
+}
