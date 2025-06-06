@@ -11,7 +11,7 @@ public class Main {
 		while (x!=y) {
 			if(x>y) {
 				System.out.println("Decrescente");
-			} else if (x<y) {
+			} else {
 				System.out.println("Crescente");
 			}
 			x = sc.nextInt();
