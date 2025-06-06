@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int cod = sc.nextInt();
+		int qntA = 0;
+		int qntG = 0;
+		int qntD = 0;
+		
+		while(cod!=4) {
+			if(cod==1) {
+				qntA += 1;
+			}
+			if(cod==2) {
+				qntG += 1;
+			}
+			if(cod==3) {
+				qntD += 1;
+			}
+			cod = sc.nextInt();
+		}
+		System.out.println("MUITO OBRIGADO");
+		System.out.println("Alcool: "+qntA);
+		System.out.println("Gasolina: "+qntG);
+		System.out.println("Diesel: "+qntD);
+		
+		sc.close();
+	}
+
+}
