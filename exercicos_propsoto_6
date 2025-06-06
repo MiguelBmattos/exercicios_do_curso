@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		int qnt = 0;
+		double media=0;
+		
+		if(x<0) {
+			System.out.println("impossivel calcular");
+		} else {
+		
+		while(x>0) {
+			media += x;
+			qnt += 1;
+			x = sc.nextInt();
+		}
+	
+		media = media/qnt;
+		
+		System.out.printf("%.2f",media);
+		}
+		sc.close();
+	}
+
+}
