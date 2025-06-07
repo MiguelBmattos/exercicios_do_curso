@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int opcao=1;
+		int qntGrenais=0; 
+		int vI=0; 
+		int vG=0; 
+		int qntEmpates=0;
+		
+		while(opcao==1) {
+			int golI = sc.nextInt();
+			int golG = sc.nextInt();
+			qntGrenais += 1;
+			
+			if(golG>golI) {
+				vG += 1;
+			}
+			if(golG<golI) {
+				vI += 1;
+			}
+			if(golG==golI) {
+				qntEmpates += 1;
+			}
+			System.out.println("Novo Grenal (1-sim 2-nao)");
+			opcao = sc.nextInt();
+		}
+		
+		System.out.println(qntGrenais+" grenais");
+		System.out.println("Inter: "+vI);
+		System.out.println("Gremio: "+vG);
+		System.out.println("Empates: "+qntEmpates);
+		
+		if(vI>vG) {
+			System.out.println("Inter venceu mais");
+		} else if(vI<vG) {
+			System.out.println("Gremio venceu mais");
+		} else {
+			System.out.println("Nao houve vencedor");
+		}
+		
+		sc.close();
+	}
+
+}
