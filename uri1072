@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		int qntFora=0;
+		int qntDentro=0;
+		
+		for(int i = 1; i<=n; i++) {
+			int x = sc.nextInt();
+			if(x>=10 && x<=20) {
+				qntDentro += 1;
+			} else {
+				qntFora+=1;
+			}
+		}
+		
+		System.out.println(qntDentro+" in");
+		System.out.println(qntFora+" out");
+		
+		sc.close();
+	}
+
+}
