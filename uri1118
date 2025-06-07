@@ -1,0 +1,44 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		double media;
+		int cod=1;
+		
+		while(cod == 1) {
+			
+		double nota1 = sc.nextDouble();
+		while(nota1<0 || nota1>10) {
+			System.out.println("Nota Invalida");
+			nota1 = sc.nextDouble();
+		}
+		
+		
+		double nota2 = sc.nextDouble();
+		while(nota2<0 || nota2>10) {
+			System.out.println("Nota Invalida");
+			nota2 = sc.nextDouble();
+		}
+		
+		media = (nota1+nota2)/2;
+		
+		System.out.printf("media = %.2f\n",media);
+		System.out.println("Novo calculo (1-sim 2-nao)");
+		cod = sc.nextInt();
+		
+		while(cod!=2 && cod!=1) {
+			System.out.println("Novo calculo (1-sim 2-nao)");
+			cod = sc.nextInt();
+			
+		}
+	}
+	
+		sc.close();
+	}
+
+}
