@@ -1,0 +1,48 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		double qntC = 0; 
+		double qntR = 0; 
+		double qntS = 0;
+		int total = 0;
+		char tipo;
+		
+		for(int i=1; i<=n; i++) {
+			int quantia = sc.nextInt();
+			tipo = sc.next().charAt(0);
+			total += quantia;
+			if(tipo=='c') {
+				qntC += quantia;
+			}
+			if(tipo=='r') {
+				qntR += quantia;
+			}
+			if(tipo=='s') {
+				qntS += quantia;
+			}
+		}
+		
+		double pC = (qntC*100)/total;
+		double pR = (qntR*100)/total;
+		double pS = (qntS*100)/total;
+		
+		System.out.println("Total: "+total+" cobaias");
+		System.out.printf("Total de coelhos: %.0f\n",qntC);
+		System.out.printf("Total de ratos: %.0f\n",qntR);
+		System.out.printf("Total de sapos: %.0f\n",qntS);
+		System.out.printf("Percentual de coelhos: %.2f %%\n", pC);
+		System.out.printf("Percentual de ratos: %.2f %%\n",pR);
+		System.out.printf("Percentual de sapos: %.2f %%\n",pS);
+		
+		
+		sc.close();
+	}
+
+}
