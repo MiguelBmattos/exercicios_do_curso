@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		int x = 1;
+		
+		for(int i=1; i<=n; i++) {
+			System.out.printf("%d ",x);
+			System.out.printf("%d ",x*x);
+			System.out.printf("%d\n",x*x*x);
+			System.out.printf("%d ",x);
+			System.out.printf("%d ",x*x+1);
+			System.out.printf("%d\n",x*x*x+1);
+			x += 1;
+		}
+		
+		sc.close();
+	}
+
+}
