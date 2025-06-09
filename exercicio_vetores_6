@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		String[] nome = new String[n];
+		int[] idade = new int[n];
+		
+		for(int i=0; i<n; i++) {
+			nome[i] = sc.next();
+			idade[i] = sc.nextInt();
+		}
+		
+		int maior = idade[0];
+		int cont = 0;
+		
+		for(int j=0; j<n; j++) {
+			if(idade[j]>maior) {
+				maior = idade[j];
+				cont = j;
+			}
+		}
+		
+		System.out.print("Pessoa mais velha: "+nome[cont]);
+		
+		sc.close();
+	}
+
+}
