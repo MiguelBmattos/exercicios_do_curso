@@ -1,0 +1,54 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		String[] produto = new String[n];
+		double[] precoCompra = new double[n];
+		double[] precoVenda = new double[n];
+		double totalCompra = 0;
+		double totalVenda = 0;
+		double[] lucro = new double[n];
+		int lucroAbaixo = 0;
+		int lucroEntre = 0;
+		int lucroAcima = 0;
+
+		for (int i = 0; i < n; i++) {
+			produto[i] = sc.next();
+			precoCompra[i] = sc.nextDouble();
+			precoVenda[i] = sc.nextDouble();
+			totalCompra += precoCompra[i];
+			totalVenda += precoVenda[i];
+			lucro[i] = (precoVenda[i] - precoCompra[i]) * 100 / precoCompra[i];
+		}
+
+		for (int j = 0; j < n; j++) {
+			if (lucro[j] < 10) {
+				lucroAbaixo += 1;
+			}
+			if (lucro[j] >= 10 && lucro[j] <= 20) {
+				lucroEntre += 1;
+			}
+			if (lucro[j] > 20) {
+				lucroAcima += 1;
+			}
+		}
+
+		double lucroTotal = totalVenda - totalCompra;
+
+		System.out.println("Lucro abaixo de 10%: " + lucroAbaixo);
+		System.out.println("Lucro entre 10%% e 20%: " + lucroEntre);
+		System.out.println("Lucro acima de 20%: " + lucroAcima);
+		System.out.printf("Valor total de compra: %.2f\n", totalCompra);
+		System.out.printf("Valor de venda: %.2f\n", totalVenda);
+		System.out.printf("Lucro total: %.2f", lucroTotal);
+
+		sc.close();
+	}
+
+}
